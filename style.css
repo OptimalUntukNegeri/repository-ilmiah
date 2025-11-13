@@ -1,0 +1,331 @@
+/* RESET */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  background: #f7f9fc;
+  color: #333;
+}
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-image: linear-gradient(270deg, #ffffff 0%, #ffffff 100%);
+  padding: 10px 20px;
+  color: white;
+}
+
+.logo-img {
+  height: 60px;
+  object-fit: contain;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+}
+
+.nav-links a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  font-size: 14px;
+  font-family: "Poppins", sans-serif; /* 🔹 Font baru untuk navbar */
+  font-weight: 500;
+}
+
+/* HERO */
+.hero {
+  background: linear-gradient(rgba(31, 154, 255, 0.663), rgba(18, 18, 18, 0.679)),
+    url("img/bg.png") no-repeat center center/cover;
+  color: #fff;
+  padding: 250px 20px;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.hero-buttons .btn {
+  margin: 10px;
+}
+
+/* CONTENT */
+.content {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+h2 {
+  text-align: center;
+  color: #002b7a;
+  margin-bottom: 20px;
+}
+
+/* CARD */
+.card {
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.cover-img {
+  width: 120px;
+  border-radius: 5px;
+  flex-shrink: 0;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card-content {
+  flex: 1;
+  min-width: 200px;
+}
+
+/* AUTHOR LIST */
+.author-list {
+  max-height: 110px;
+  overflow: hidden;
+  position: relative;
+  transition: max-height 0.4s ease;
+}
+
+/* Efek gradasi putih hanya untuk daftar dengan >5 author */
+.author-list.gradient::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 30px;
+  background: linear-gradient(to top, white, transparent);
+}
+
+/* Saat daftar diperluas */
+.author-list.expanded {
+  max-height: none !important;
+  overflow: visible !important;
+}
+
+.author-list.expanded::after {
+  display: none;
+}
+
+/* Tombol 'selengkapnya' */
+.toggle-authors {
+  display: block;
+  margin-top: 6px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  color: #007bff;
+  user-select: none;
+  font-weight: 500;
+  text-align: left;
+}
+
+.toggle-authors:hover {
+  text-decoration: underline;
+}
+
+/* Tombol Baca Detail */
+.btn {
+  display: inline-block;
+  background-color: #002b7a;
+  color: white;
+  padding: 10px 15px;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 5px;
+  font-size: 14px;
+}
+
+.btn-secondary {
+  background-color: #0056b3;
+}
+
+/* SEARCH + PAGINATION */
+.search-box {
+  width: 100%;
+  max-width: 400px;
+  margin: 20px auto;
+  display: block;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+.pagination {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.pagination button {
+  margin: 3px;
+  padding: 6px 12px;
+  border: none;
+  background-color: #1c5092;
+  color: white;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.pagination button:hover {
+  background-color: #5e7bb1;
+}
+
+.pagination button.active {
+  background-color: #002b7a;
+  font-weight: bold;
+}
+
+/* FOOTER */
+.footer {
+  background-color: #dcdcdc;
+  color: rgb(0, 0, 0);
+  padding: 40px 20px 20px;
+  font-size: 14px;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 220px;
+}
+
+.footer-logo {
+  width: 180px;
+  margin-bottom: 10px;
+}
+
+.footer-section h4 {
+  font-size: 16px;
+  margin-bottom: 10px;
+  border-bottom: 2px solid #007bff;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.footer-section ul {
+  list-style: none;
+}
+
+.footer-section ul li {
+  margin-bottom: 8px;
+}
+
+.footer-section ul li a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  text-align: center;
+  border-top: 1px solid #444;
+  margin-top: 40px;
+  padding-top: 15px;
+  font-size: 13px;
+  color: #000000;
+}
+
+.subscribe-form {
+  display: flex;
+  margin-bottom: 15px;
+}
+
+.subscribe-form input[type="email"] {
+  flex: 1;
+  padding: 8px;
+  border: none;
+  border-radius: 4px 0 0 4px;
+}
+
+.subscribe-form button {
+  padding: 8px 16px;
+  background-color: #007bff;
+  border: none;
+  color: white;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+}
+
+/* RESPONSIVE */
+.menu-toggle {
+  font-size: 24px;
+  cursor: pointer;
+  display: none;
+  color: white;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #aaaaaa;
+    padding: 10px 0;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .nav-links li {
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  .card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .cover-img {
+    width: 100%;
+    max-width: 220px;
+    height: auto;
+  }
+
+  .toggle-authors {
+    text-align: center;
+  }
+}
