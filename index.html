@@ -4,15 +4,11 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- <meta name="google-site-verification" content="R1mTwMgNmpWVn5lQo7MczPANkyj7aq4x4mHaoihy9Oo" /> -->
-    <title>Repository Ilmiah | PT Optimal Untuk Negeri</title>
-    <link rel="icon" href="img/icon/favicon.ico" type="image/x-icon" />
-    <link rel="stylesheet" href="style.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Roboto:wght@400;500;700&display=swap"
-        rel="stylesheet">
-
+    <meta name="google-site-verification" content="R1mTwMgNmpWVn5lQo7MczPANkyj7aq4x4mHaoihy9Oo" />
+    <title>Repository Ilmiah | Nuansa Fajar Cemerlang</title>
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="styleOp.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
 </head>
 
 <body>
@@ -27,19 +23,20 @@
             <li><a href="#">Tentang Kami</a></li>
             <li><a href="#">Kontak</a></li>
             <li><a href="#daftar-artikel">Katalog Buku</a></li>
-            <li><a href="https://scholar.google.com/citations?hl=en&user=-ZvqsX4AAAAJ&view_op=list_works&gmla=AKzYXQ37ZoNqByfTKz9uFXlHuFWkYkFPl_ZctjRMPS3Tima7ObSSB2w5w2cnOCGeDnmsYKrUjwv68eWla_5vY9b-">Google Scholar</a></li>
+            <li><a href="https://scholar.google.com/citations?user=HJh9up8AAAAJ&hl=id">Google Scholar</a></li>
         </ul>
     </nav>
 
     <!-- HERO SECTION -->
     <section class="hero">
         <div class="hero-content">
-            <h1>Temukan Wawasan Baru & Pengalaman Lewat Satu Buku</h1>
+            <h1>Temukan Wawasan Baru Lewat Koleksi Terbaik</h1>
             <p>
-                Optimal Untuk Negeri, Bersama Membangun Negeri.
+                Dukung perjalanan intelektual Anda dengan buku-buku pilihan dari Nuansa Fajar Cemerlang, tersedia dalam
+                format digital dan cetak.
             </p>
             <div class="hero-buttons">
-                <a href="#daftar-artikel" class="btn">Katalog Buku</a>
+                <a href="#daftar-artikel" class="btn btn-primary">Eksplorasi Katalog</a>
                 <a href="#" class="btn btn-secondary">Hubungi Kami</a>
             </div>
         </div>
@@ -48,11 +45,18 @@
     <!-- BUKU SECTION -->
     <section class="content" id="daftar-artikel">
         <h2>Daftar Repository Ilmiah</h2>
-        <input type="text" id="searchInput" placeholder="Cari judul atau penulis..." class="search-box"
-            onkeyup="filterBooks()" />
-        <div id="card-container" style="display: flex; flex-direction: column; gap: 20px;">
-            <!-- cards akan muncul di sini -->
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Cari judul buku atau nama penulis..." class="search-box"
+                onkeyup="filterBooks()" />
         </div>
+
+        <div id="card-container">
+            <div style="text-align: center; grid-column: 1/-1;">
+                <div class="loader"></div>
+                <p>Menghubungkan ke database...</p>
+            </div>
+        </div>
+
         <div id="pagination" class="pagination"></div>
     </section>
 
@@ -60,7 +64,8 @@
     <footer class="footer">
         <div class="footer-container">
             <div class="footer-section about">
-                <img src="img/Logo.png" alt="Nuansa Fajar Cemerlang" class="footer-logo" />
+                <img src="img/LogoOptimal.png" alt="Nuansa Fajar Cemerlang" class="footer-LogoOptimal.png"
+                    style="height: 40px; margin-bottom: 1.5rem;" />
                 <p>
                     Kami adalah wadah yang menginspirasi para Dosen dan Mahasiswa untuk mengeksplorasi karya dan inovasi
                     dalam bidangnya masing-masing.
@@ -69,9 +74,9 @@
             <div class="footer-section links">
                 <h4>Halaman Terkait</h4>
                 <ul>
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Contact</a></li>
-                    <li><a href="#">Books</a></li>
+                    <li><a href="#">Tentang Kami</a></li>
+                    <li><a href="#">Hubungi Kami</a></li>
+                    <li><a href="#">Katalog Buku</a></li>
                 </ul>
             </div>
             <div class="footer-section links">
@@ -90,13 +95,12 @@
                     <input type="email" placeholder="Alamat Email" required />
                     <button type="submit">Kirim</button>
                 </form>
-                <p>Kencana Tower Lt. Mezzanine, Jl. Raya Meruya Ilir No. 88 RT. 001 RW. 005, Kel. Meruya Utara, Kec.
-                    Kembangan, Jakarta Barat, DKI Jakarta - 11620</p><br>
-                <p>management@optimalbynfc.com</p><br>
-                <a href="https://wa.link/gkfaqz" style="color: #000; text-decoration: none;">
-                    <span class="elementor-icon-list-text">+6281292552552</span>
-                </a>
-
+                <div style="margin-top: 1.5rem; font-size: 0.85rem; line-height: 1.8;">
+                    <strong>PT Optimal Untuk Negeri</strong><br>
+                    <p>management@optimalbynfc.com</p><br>
+                    <a href="https://wa.link/gkfaqz" style="color: #000; text-decoration: none;">
+                        <span class="elementor-icon-list-text">+6281292552552</span>
+                </div>
             </div>
         </div>
         <div class="footer-bottom">
@@ -107,51 +111,62 @@
     <!-- SDK supabase -->
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     <script>
+        // Database Configuration
         const SUPABASE_URL = "https://dqryqboivjxwlymneino.supabase.co";
         const SUPABASE_ANON_KEY =
             "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImRxcnlxYm9pdmp4d2x5bW5laW5vIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjI5OTk1OTgsImV4cCI6MjA3ODU3NTU5OH0.i5a8MC0_27GdlVkXYANY7S56dRaSM8p4Re9ZMj-0AzA";
-        const supabaseClient = supabase.createClient(
-            SUPABASE_URL,
-            SUPABASE_ANON_KEY
-        );
+        const supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
-        const cardsPerPage = 5;
+        const cardsPerPage = 8; // Optimal for grid
         let currentPage = 1;
         let currentSearchTerm = "";
 
         async function loadBooks(page = 1, searchTerm = "") {
+            const container = document.getElementById("card-container");
+            if (page === 1 && searchTerm === "") {
+                // Initial load show loader
+            } else {
+                container.style.opacity = "0.6";
+            }
+
             const from = (page - 1) * cardsPerPage;
             const to = from + cardsPerPage - 1;
 
-            let query;
+            let query = supabaseClient
+                .from("books")
+                .select("*", { count: "exact" });
+
             if (searchTerm.trim() !== "") {
-                query = supabaseClient
-                    .from("books")
-                    .select("*", { count: "exact" })
-                    .or(`judul.ilike.%${searchTerm}%,author.ilike.%${searchTerm}%`)
-                    .range(from, to);
-            } else {
-                query = supabaseClient
-                    .from("books")
-                    .select("*", { count: "exact" })
-                    .range(from, to);
+                query = query.or(`judul.ilike.%${searchTerm}%,author.ilike.%${searchTerm}%`);
             }
+
+            query = query.range(from, to).order('created_at', { ascending: false });
 
             const { data, error, count } = await query;
 
+            container.style.opacity = "1";
+
             if (error) {
-                console.error("Error:", error);
+                console.error("Error fetching books:", error);
+                container.innerHTML = `<p style="text-align: center; grid-column: 1/-1; color: #ef4444;">Gagal memuat data dari database. Silakan coba lagi nanti.</p>`;
                 return;
             }
 
-            const container = document.getElementById("card-container");
             container.innerHTML = "";
+
+            if (data.length === 0) {
+                container.innerHTML = `<div style="text-align: center; grid-column: 1/-1; padding: 3rem;">
+          <p style="font-size: 1.1rem; color: #64748b;">Tidak ada buku yang ditemukan untuk "${searchTerm}"</p>
+          <button onclick="document.getElementById('searchInput').value=''; loadBooks(1, '');" class="btn" style="margin-top: 1rem; color: var(--primary-color);">Reset Pencarian</button>
+        </div>`;
+                return;
+            }
 
             data.forEach((book) => {
                 const card = document.createElement("div");
                 card.classList.add("card");
 
-                // --- BAGIAN CARD BARU ---
+                // Split authors by newline
                 const authors = book.author
                     ? book.author.split(/\r?\n/).map(a => a.trim()).filter(a => a)
                     : [];
@@ -159,33 +174,34 @@
                 const hasMore = authors.length > 5;
 
                 card.innerHTML = `
-        <img src="${book.cover_url}" alt="Cover ${book.judul}" class="cover-img" loading="lazy" />
-        <div class="card-content">
-          <h3>${book.judul}</h3>
-          <b>Oleh:</b>
-          <div class="author-list ${hasMore ? "gradient" : ""}" id="author-list-${book.id}">
-            ${authors.map(a => `<div>${a}</div>`).join("")}
+          <div class="cover-container">
+            <img src="${book.cover_url || 'https://via.placeholder.com/300x420?text=No+Cover'}" alt="Cover ${book.judul}" class="cover-img" loading="lazy" />
           </div>
-          ${hasMore ? `<span class="toggle-authors" data-id="${book.id}">selengkapnya ▼</span>` : ""}
-          <br><a href="${book.detail_buku}" class="btn">Baca Detail</a>
-        </div>
-      `;
-
+          <div class="card-content">
+            <h3>${book.judul}</h3>
+            <span class="author-label">Penulis</span>
+            <div class="author-list ${hasMore ? "gradient" : ""}" id="author-list-${book.id}">
+              ${authors.map(a => `<div class="author-item" title="${a}">${a}</div>`).join("")}
+            </div>
+            ${hasMore ? `<span class="toggle-authors" data-id="${book.id}">+ Selengkapnya</span>` : ""}
+            <div class="card-footer">
+              <a href="${book.detail_buku}" class="btn btn-detail">Lihat Detail</a>
+            </div>
+          </div>
+        `;
 
                 container.appendChild(card);
             });
 
-            // Event listener tombol selengkapnya
-            setTimeout(() => {
-                document.querySelectorAll(".toggle-authors").forEach(btn => {
-                    btn.onclick = () => {
-                        const id = btn.getAttribute("data-id");
-                        const list = document.getElementById(`author-list-${id}`);
-                        const expanded = list.classList.toggle("expanded");
-                        btn.textContent = expanded ? "sembunyikan ▲" : "selengkapnya ▼";
-                    };
-                });
-            }, 100);
+            // Toggle Author Logic
+            document.querySelectorAll(".toggle-authors").forEach(btn => {
+                btn.onclick = (e) => {
+                    const id = btn.getAttribute("data-id");
+                    const list = document.getElementById(`author-list-${id}`);
+                    const isExpanded = list.classList.toggle("expanded");
+                    btn.textContent = isExpanded ? "- Sembunyikan" : "+ Selengkapnya";
+                };
+            });
 
             currentPage = page;
             currentSearchTerm = searchTerm;
@@ -199,113 +215,100 @@
 
             if (totalPages <= 1) return;
 
-            // Tombol Prev
-            if (currentPage > 1) {
-                const prevBtn = document.createElement("button");
-                prevBtn.textContent = "« Prev";
-                prevBtn.onclick = () => {
-                    loadBooks(currentPage - 1, currentSearchTerm);
-                    scrollToTop();
-                };
-                pagination.appendChild(prevBtn);
-            }
+            // Previous
+            const prevBtn = document.createElement("button");
+            prevBtn.innerHTML = "&laquo;";
+            prevBtn.disabled = currentPage === 1;
+            prevBtn.onclick = () => { loadBooks(currentPage - 1, currentSearchTerm); scrollToTop(); };
+            pagination.appendChild(prevBtn);
 
-            let startPage, endPage;
-            if (totalPages <= 5) {
-                startPage = 1;
-                endPage = totalPages;
-            } else {
-                if (currentPage <= 3) {
-                    startPage = 1;
-                    endPage = 5;
-                } else if (currentPage >= totalPages - 2) {
-                    startPage = totalPages - 4;
-                    endPage = totalPages;
-                } else {
-                    startPage = currentPage - 2;
-                    endPage = currentPage + 2;
-                }
-            }
+            // Page Numbers
+            let start = Math.max(1, currentPage - 2);
+            let end = Math.min(totalPages, start + 4);
+            if (end - start < 4) start = Math.max(1, end - 4);
 
-            if (startPage > 1) {
-                const firstBtn = document.createElement("button");
-                firstBtn.textContent = "1";
-                firstBtn.onclick = () => {
-                    loadBooks(1, currentSearchTerm);
-                    scrollToTop();
-                };
-                pagination.appendChild(firstBtn);
-
-                if (startPage > 2) {
+            if (start > 1) {
+                const first = document.createElement("button");
+                first.textContent = "1";
+                first.onclick = () => { loadBooks(1, currentSearchTerm); scrollToTop(); };
+                pagination.appendChild(first);
+                if (start > 2) {
                     const dots = document.createElement("span");
                     dots.textContent = "...";
+                    dots.style.padding = "0 5px";
                     pagination.appendChild(dots);
                 }
             }
 
-            for (let i = startPage; i <= endPage; i++) {
+            for (let i = start; i <= end; i++) {
                 const btn = document.createElement("button");
                 btn.textContent = i;
                 if (i === currentPage) btn.classList.add("active");
-                btn.onclick = () => {
-                    loadBooks(i, currentSearchTerm);
-                    scrollToTop();
-                };
+                btn.onclick = () => { loadBooks(i, currentSearchTerm); scrollToTop(); };
                 pagination.appendChild(btn);
             }
 
-            if (endPage < totalPages) {
-                if (endPage < totalPages - 1) {
+            if (end < totalPages) {
+                if (end < totalPages - 1) {
                     const dots = document.createElement("span");
                     dots.textContent = "...";
+                    dots.style.padding = "0 5px";
                     pagination.appendChild(dots);
                 }
-                const lastBtn = document.createElement("button");
-                lastBtn.textContent = totalPages;
-                lastBtn.onclick = () => {
-                    loadBooks(totalPages, currentSearchTerm);
-                    scrollToTop();
-                };
-                pagination.appendChild(lastBtn);
+                const last = document.createElement("button");
+                last.textContent = totalPages;
+                last.onclick = () => { loadBooks(totalPages, currentSearchTerm); scrollToTop(); };
+                pagination.appendChild(last);
             }
 
-            // Tombol Next
-            if (currentPage < totalPages) {
-                const nextBtn = document.createElement("button");
-                nextBtn.textContent = "Next »";
-                nextBtn.onclick = () => {
-                    loadBooks(currentPage + 1, currentSearchTerm);
-                    scrollToTop();
-                };
-                pagination.appendChild(nextBtn);
-            }
+            // Next
+            const nextBtn = document.createElement("button");
+            nextBtn.innerHTML = "&raquo;";
+            nextBtn.disabled = currentPage === totalPages;
+            nextBtn.onclick = () => { loadBooks(currentPage + 1, currentSearchTerm); scrollToTop(); };
+            pagination.appendChild(nextBtn);
         }
 
+        // Debounce search for performance
+        let searchTimeout;
         function filterBooks() {
-            const input = document.getElementById("searchInput");
-            const searchTerm = input.value.trim();
-            loadBooks(1, searchTerm);
+            clearTimeout(searchTimeout);
+            searchTimeout = setTimeout(() => {
+                const input = document.getElementById("searchInput");
+                loadBooks(1, input.value.trim());
+            }, 400);
         }
 
         function scrollToTop() {
             document.getElementById("daftar-artikel").scrollIntoView({ behavior: "smooth" });
         }
 
-        window.onload = () => {
-            loadBooks();
-        };
-
-        // Navbar toggle
+        // Navbar Mobile Toggle
         const toggle = document.getElementById("menu-toggle");
         const navLinks = document.getElementById("nav-links");
         toggle.addEventListener("click", () => {
-            navLinks.classList.toggle("show");
+            const isShowing = navLinks.classList.toggle("show");
+            if (isShowing) {
+                navLinks.style.display = "flex";
+                navLinks.style.flexDirection = "column";
+                navLinks.style.position = "absolute";
+                navLinks.style.top = "100%";
+                navLinks.style.left = "0";
+                navLinks.style.width = "100%";
+                navLinks.style.background = "white";
+                navLinks.style.padding = "1.5rem";
+                navLinks.style.boxShadow = "0 10px 15px -3px rgba(0,0,0,0.1)";
+                navLinks.style.borderTop = "1px solid #f1f5f9";
+            } else {
+                navLinks.style.display = "none";
+            }
         });
+
+        // Initialize
+        window.onload = () => {
+            loadBooks();
+        };
     </script>
 </body>
 
-
 </html>
-
-
-
