@@ -13,7 +13,8 @@
         /* CSS Tambahan untuk Penulis */
         .author-list {
             position: relative;
-            max-height: 120px; /* Sesuaikan dengan tinggi kira-kira 5 baris */
+            max-height: 120px;
+            /* Sesuaikan dengan tinggi kira-kira 5 baris */
             overflow: hidden;
             transition: max-height 0.3s ease-out;
             margin-bottom: 0.5rem;
@@ -32,7 +33,8 @@
         }
 
         .author-list.expanded {
-            max-height: 1000px; /* Cukup besar untuk menampung semua penulis */
+            max-height: 1000px;
+            /* Cukup besar untuk menampung semua penulis */
         }
 
         .author-list.expanded::after {
@@ -188,7 +190,13 @@
                 .select("*", { count: "exact" });
 
             if (searchTerm.trim() !== "") {
-                query = query.or(`judul.ilike.%${searchTerm}%,author.ilike.%${searchTerm}%`);
+                const cleanSearch = searchTerm.trim().replace(/[^\w\s]/gi, ' ').replace(/\s+/g, ' ');
+                const keywords = cleanSearch.split(' ').filter(k => k.length > 0);
+                if (keywords.length > 0) {
+                    keywords.forEach(word => {
+                        query = query.or(`judul.ilike.%${word}%,author.ilike.%${word}%`);
+                    });
+                }
             }
 
             query = query.range(from, to).order('created_at', { ascending: false });
@@ -251,7 +259,7 @@
                     const list = document.getElementById(`author-list-${id}`);
                     const isExpanded = list.classList.toggle("expanded");
                     btn.textContent = isExpanded ? "- Sembunyikan" : "+ Selengkapnya";
-                    
+
                     // Toggle gradient class based on expansion
                     if (isExpanded) {
                         list.classList.remove("gradient");
