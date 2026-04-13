@@ -1,305 +1,302 @@
 /* =========================================
-   GENERAL BODY STYLING
+   GENERAL STYLING (Matching Index)
 ========================================= */
-body {
+:root {
+  --primary-color: #2563eb;
+  --primary-hover: #1d4ed8;
+  --bg-color: lab(96.19% 0.01 -0.01);
+  --text-main: #1e293b;
+  --text-muted: #64748b;
+  --card-bg: #ffffff;
+  --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+}
+
+* {
   margin: 0;
-  font-family: "Poppins", sans-serif;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
   background: linear-gradient(rgba(31, 154, 255, 0.6), rgba(42, 149, 255, 0.6)),
     url("img/bg.png") no-repeat center center/cover;
-  background-attachment: fixed;
-  color: #333;
+  color: var(--text-main);
+  line-height: 1.6;
 }
 
 /* =========================================
-   NAVBAR
+   NAVBAR (Matching Index)
 ========================================= */
 .navbar {
+  background: white;
+  padding: 1rem 5%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
-  background-image: linear-gradient(270deg, #ffffff 0%, #ffffff 100%);
-  padding: 10px 20px;
-  color: white;
-  position: relative;
-}
-
-.logo {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-weight: bold;
-  font-size: 18px;
+  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 .logo-img {
-  height: 60px;
-  object-fit: contain;
+  height: 40px;
 }
 
 .nav-links {
-  list-style: none;
   display: flex;
-  gap: 15px;
-  flex-wrap: wrap;
+  list-style: none;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
 }
 
-.nav-links li a {
-  color: rgb(0, 0, 0);
+.nav-links li {
+  display: flex;
+  align-items: center;
+}
+
+.nav-links a {
   text-decoration: none;
-  font-size: 14px;
-  font-family: "Poppins", sans-serif; 
+  color: var(--text-main);
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: color 0.2s;
+  display: block;
 }
 
-/* TOGGLE MENU */
+.nav-links a:hover {
+  color: var(--primary-color);
+}
+
 .menu-toggle {
   display: none;
-  font-size: 28px;
+  font-size: 1.5rem;
   cursor: pointer;
-  color: rgb(0, 0, 0);
-  position: absolute;
-  top: 18px;
-  right: 20px;
-  z-index: 1001;
 }
 
 /* =========================================
-   DETAIL CONTAINER (Desain Dua Kolom)
+   DETAIL CONTAINER
 ========================================= */
 .detail-container {
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  max-width: 1500px;
-  margin: 60px auto;
-  padding: 40px;
-  background: #fff;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  gap: 30px;
+  max-width: 1100px;
+  margin: 4rem auto;
+  padding: 3rem;
+  background: var(--card-bg);
+  border-radius: 1.25rem;
+  box-shadow: var(--shadow-lg);
+  gap: 3rem;
+  border: 1px solid #f1f5f9;
 }
 
-/* BAGIAN KIRI */
+/* BAGIAN KIRI (Cover & Meta) */
 .detail-left {
-  width: 30%;
-  /* display: flex; */
+  width: 32%;
+  display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  text-align: left;
 }
 
 .book-cover-section {
   width: 100%;
-  display: flex;
-  justify-content: center;
+  margin-bottom: 1.5rem;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: var(--shadow);
 }
 
 .book-cover {
   width: 100%;
-  max-width: 220px;
-  border-radius: 15px;
+  display: block;
   object-fit: cover;
-  background-color: #1c5092;
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
 }
 
-/* ISBN & AUTHORS */
+.book-cover:hover {
+  transform: scale(1.02);
+}
+
 .book-isbn {
-  margin-top: 20px;
-  font-weight: 600;
-  color: #000;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  background: #f1f5f9;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
   text-align: center;
+  margin-bottom: 1.5rem;
 }
 
-.book-authors {
-  margin-top: 15px;
+.book-author {
+  font-size: 0.9rem;
+  color: #334155;
+  line-height: 1.8;
 }
 
-.book-authors p {
-  margin: 4px 0;
-  font-size: 14px;
+.book-author strong {
+  color: var(--text-main);
+  display: block;
+  margin-bottom: 0.2rem;
 }
 
 /* GARIS PEMISAH */
 .detail-divider {
-  width: 2px;
-  background-color: #000;
-  height: auto;
+  width: 1px;
+  background-color: #e2e8f0;
   align-self: stretch;
 }
 
-/* BAGIAN KANAN */
+/* BAGIAN KANAN (Title & Abstract) */
 .detail-right {
-  width: 68%;
+  width: 65%;
+  display: flex;
+  flex-direction: column;
 }
 
 .book-title {
-  color: #000;
-  font-size: 26px;
-  font-weight: 700;
-  margin-bottom: 20px;
-  text-align: left;
+  font-size: 2rem;
+  font-weight: 800;
+  color: #0f172a;
+  line-height: 1.3;
+  margin-bottom: 2rem;
 }
 
 .book-abstract h2 {
-  font-size: 18px;
+  font-size: 1.25rem;
   font-weight: 700;
-  margin-bottom: 10px;
+  color: #0f172a;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.book-abstract h2::after {
+  content: '';
+  flex-grow: 1;
+  height: 2px;
+  background: #f1f5f9;
+  margin-left: 0.5rem;
 }
 
 .book-abstract p {
-  font-size: 15px;
-  line-height: 1.7;
+  font-size: 1rem;
+  color: #475569;
+  line-height: 1.8;
   text-align: justify;
 }
 
-/* TOMBOL DOWNLOAD */
+/* TOMBOL DOWNLOAD & NAVIGASI */
 .download-section {
-  margin-top: 25px;
+  margin-top: 3rem;
   display: flex;
-  justify-content: center;
-  gap: 15px;
+  gap: 1rem;
 }
 
-.download-section .btn {
-  font-size: 14px;
-  padding: 10px 18px;
-  width: 20pc;
-}
-
-/* =========================================
-   BUTTON STYLING
-========================================= */
 .btn {
-  background-color: #002b7a;
-  color: white;
-  padding: 10px 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.8rem 2rem;
+  border-radius: 0.75rem;
   text-decoration: none;
-  border-radius: 5px;
-  font-size: 14px;
-  transition: background-color 0.3s ease;
-  text-align: center;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: all 0.2s;
+  cursor: pointer;
+  border: none;
+  flex: 1;
 }
 
-.btn:hover {
-  background-color: #001d52;
+.btn-primary,
+.btn:not(.btn-secondary) {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.btn-primary:hover,
+.btn:not(.btn-secondary):hover {
+  background-color: var(--primary-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
 }
 
 .btn-secondary {
-  background-color: #0056b3;
+  background-color: #f1f5f9;
+  color: #475569;
+  border: 1px solid #e2e8f0;
 }
 
 .btn-secondary:hover {
-  background-color: #003d80;
+  background-color: #e2e8f0;
+  color: #1e293b;
+  transform: translateY(-2px);
 }
 
 /* =========================================
-   FOOTER
+   FOOTER (Matching Index)
 ========================================= */
 .footer {
-  background-color: #e3e3e3;
+  background: #e6e6e6;
   color: rgb(0, 0, 0);
-  padding: 40px 20px 20px;
-  font-size: 14px;
+  padding: 5rem 5% 2.5rem;
+  margin-top: 6rem;
 }
 
 .footer-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 40px;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 4rem;
   max-width: 1200px;
-  margin: auto;
+  margin: 0 auto;
 }
 
-.footer-section {
-  flex: 1;
-  min-width: 220px;
+.footer h4 {
+  color: white;
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
 }
 
 .footer-logo {
-  width: 180px;
-  margin-bottom: 10px;
+  height: 40px;
+  margin-bottom: 1.5rem;
 }
 
-.footer-section h4 {
-  font-size: 16px;
-  margin-bottom: 10px;
-  border-bottom: 2px solid #007bff;
-  display: inline-block;
-  padding-bottom: 5px;
-}
-
-.footer-section ul {
+.footer ul {
   list-style: none;
-  padding: 0;
 }
 
-.footer-section ul li {
-  margin-bottom: 8px;
+.footer ul li {
+  margin-bottom: 0.85rem;
 }
 
-.footer-section ul li a {
-  color: rgb(0, 0, 0);
+.footer a {
+  color: inherit;
   text-decoration: none;
+  transition: color 0.2s;
 }
 
-.footer-section ul li a:hover {
-  text-decoration: underline;
+.footer a:hover {
+  color: white;
 }
 
 .footer-bottom {
   text-align: center;
-  border-top: 1px solid #444;
-  margin-top: 40px;
-  padding-top: 15px;
-  font-size: 13px;
-  color: #000000;
+  margin-top: 5rem;
+  padding-top: 2.5rem;
+  border-top: 1px solid #1e293b;
+  font-size: 0.9rem;
 }
 
 /* =========================================
-   RESPONSIVE TABLET & MOBILE
+   RESPONSIVE
 ========================================= */
-@media (max-width: 768px) {
-  /* NAVBAR */
-  .navbar {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    width: 100%;
-    background-color: #8e8e8e;
-    margin-top: 10px;
-    padding: 10px 0;
-  }
-
-  .nav-links.show {
-    display: flex;
-  }
-
-  .nav-links li {
-    text-align: center;
-    padding: 10px 20px;
-  }
-
-  .menu-toggle {
-    display: block;
-  }
-
-  /* DETAIL CONTAINER RESPONSIVE */
+@media (max-width: 992px) {
   .detail-container {
     flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 25px 15px;
-    margin: 20px 10px;
-  }
-
-  .detail-divider {
-    display: none;
+    padding: 2rem;
+    margin: 2rem 5%;
   }
 
   .detail-left,
@@ -307,91 +304,45 @@ body {
     width: 100%;
   }
 
-  /* Cover dan data di tengah */
-  .detail-left {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+  .detail-divider {
+    display: none;
   }
 
   .book-cover-section {
-    justify-content: center;
-    margin-bottom: 15px;
+    max-width: 300px;
+    margin: 0 auto 2rem;
   }
 
-  .book-cover {
-    max-width: 200px;
-  }
-
-  .book-isbn {
-    margin-top: 15px;
-    font-size: 15px;
-    text-align: center;
-    width: 100%;
-  }
-
-  .book-authors {
-    margin-top: 10px;
-    width: 100%;
-    text-align: center;
-  }
-
-  .book-authors p {
-    font-size: 14px;
-    margin: 3px 0;
-  }
-
-  /* Judul & sinopsis */
   .book-title {
+    font-size: 1.75rem;
     text-align: center;
-    font-size: 22px;
   }
 
-  .book-abstract h2 {
-    text-align: left;
-    font-size: 16px;
-    margin-top: 10px;
-  }
-
-  .book-abstract p {
-    font-size: 14px;
-    line-height: 1.6;
-    text-align: justify;
-  }
-
-  /* Tombol */
   .download-section {
-    justify-content: center;
     flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    width: 100%;
-  }
-
-  .btn {
-    width: 90%;
-    font-size: 15px;
   }
 }
 
-@media (max-width: 480px) {
-  .book-title {
-    font-size: 20px;
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
   }
 
-  .book-cover {
-    max-width: 160px;
+  .menu-toggle {
+    display: block;
   }
 
-  .book-abstract p {
-    font-size: 13px;
-  }
-
-  .btn {
-    font-size: 14px;
-    padding: 10px;
+  /* Mobile Nav Show */
+  .nav-links.show {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
     width: 100%;
+    background: white;
+    padding: 1.5rem;
+    box-shadow: var(--shadow-lg);
+    border-top: 1px solid #f1f5f9;
   }
 }
