@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+User-agent: Googlebot-Scholar
+Allow: /
+
+Sitemap: https://optimaluntuknegeri.github.io/repository-ilmiah//sitemap.xml
