@@ -427,6 +427,7 @@ body {
     font-size: 0.9rem;
 }
 
+/* ===== MOBILE RESPONSIVE ===== */
 @media (max-width: 768px) {
     .nav-links {
         display: none;
@@ -440,6 +441,10 @@ body {
         font-size: 2rem;
     }
 
+    .hero p {
+        font-size: 0.95rem;
+    }
+
     .hero-buttons {
         display: flex;
         flex-direction: column;
@@ -451,12 +456,63 @@ body {
         margin-left: 0;
     }
 
+    .btn {
+        font-size: 0.85rem;
+        padding: 0.6rem 1.2rem;
+    }
+
+    /* ✅ LAYOUT 2 KOLOM DI MOBILE */
     #card-container {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
     }
 
     .card {
         min-height: auto;
+    }
+
+    .card h3 {
+        font-size: 0.9rem;
+        min-height: auto;
+        margin-bottom: 0.75rem;
+    }
+
+    .author-label {
+        font-size: 0.7rem;
+        margin-bottom: 0.3rem;
+    }
+
+    .author-item {
+        font-size: 0.8rem;
+        padding: 2px 0;
+    }
+
+    .toggle-authors {
+        font-size: 0.75rem;
+        margin-bottom: 1rem;
+    }
+
+    .card-content {
+        padding: 1rem;
+    }
+
+    .btn-detail {
+        font-size: 0.8rem;
+        padding: 0.6rem;
+    }
+
+    .cover-container {
+        padding-top: 140%;
+    }
+
+    .content h2 {
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .search-box {
+        font-size: 0.9rem;
+        padding: 0.9rem 1.2rem;
     }
 }
 
